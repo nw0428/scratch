@@ -13,4 +13,4 @@ puts celcius.to_s + " in farenheight is: " + celcius_to_f(celcius).to_s
 # This bit of the code does temperature conversion
 puts "Please enter a temperature in farenheight"
 f = gets.chomp.to_f
-puts f.to_s + " in celcius is: " + f_to_celcius(f).to_s
+puts "#{f} in celcius is: #{f_to_celcius(f)}"

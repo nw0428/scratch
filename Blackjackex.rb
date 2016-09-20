@@ -1,6 +1,10 @@
 class Card
   attr_reader :face, :suit, :value
+  @@suit_array = ["Spades", "Clubs", "Hearts", "Diamonds"]
   def initialize face, suit, value
+    if !@@suit_array.include?(suit)
+      puts "this is a bad card"
+    end
     @face = face
     @suit = suit
     @value = value
@@ -14,7 +18,7 @@ end
 class Deck
   def initialize
     @card_list = []
-    ["Spades", "Clubs", "Hearts", "Diamonds"].each do |suit|
+    Card.suit_array.each do |suit|
       @card_list << Card.new("King", suit, 10)
       @card_list << Card.new("Queen", suit, 10)
       @card_list << Card.new("Jack", suit, 10)
